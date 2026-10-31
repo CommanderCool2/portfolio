@@ -4,6 +4,10 @@ A selection of software projects I have worked on.
 
 ## Maßzeit
 
+<p>
+  <img src="assets/masszeit/logo.svg" alt="Maßzeit logo" width="180">
+</p>
+
 **Focused time tracking for everyday use in a small business.**
 
 Maßzeit grew out of a concrete business need: make daily time recording straightforward for employees and give the administrator a clear view of the recorded work. The interface is in German, with mobile recording and desktop administration as the main use cases.
@@ -14,6 +18,22 @@ Maßzeit grew out of a concrete business need: make daily time recording straigh
 - Assigns time to customer/project combinations and services, with optional comments.
 - Records absence ranges and helps the administrator identify incomplete daily records.
 - Provides employee account management, time reports, and encrypted work-record exports.
+
+### Screenshots
+
+The same recording and reporting workflows adapt to desktop and mobile screens. Select an image to open it at full resolution.
+
+**Desktop recording.** The running stopwatch keeps elapsed time prominent, with service, project, and comment fields next to the save actions.
+
+[![Desktop time recording with a running stopwatch and classification fields](assets/masszeit/recording-desktop.png)](assets/masszeit/recording-desktop.png)
+
+**Desktop reporting.** The expanded hierarchy connects employee totals to projects, services, comments, and individual time intervals.
+
+[![Desktop report expanded from an employee total to an individual time interval](assets/masszeit/report-desktop.png)](assets/masszeit/report-desktop.png)
+
+| Mobile recording                                                                                                                                                             | Mobile reporting                                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img src="assets/masszeit/recording-mobile.png" alt="Mobile time recording with elapsed time and classification fields" width="280">](assets/masszeit/recording-mobile.png) | [<img src="assets/masszeit/report-mobile.png" alt="Mobile monthly report with employee totals and expanded project details" width="280">](assets/masszeit/report-mobile.png) |
 
 ### Product and interface decisions
 
