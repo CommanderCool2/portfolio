@@ -58,3 +58,58 @@ Next.js · React · TypeScript · Tailwind CSS · shadcn/ui · Supabase Auth and
 ### About this case study
 
 Maßzeit was developed for a specific company's internal use. The application source and operational repository remain private. This page presents the product and engineering work; it does not provide a reusable application distribution or a public demo.
+
+## COROCU
+
+<p>
+  <img src="assets/corocu/logo.png" alt="COROCU logo" width="180">
+</p>
+
+**Private coffee-roast tracking from green bean to cup.**
+
+COROCU grew out of a personal roasting practice: keep every coffee, roast, and cupping in one place, and see how each roast develops from the first cup to the last. The interface is in English, with desktop and mobile screens for the same workflows.
+
+### What the application does
+
+- Manages a coffee inventory with current and archived coffees.
+- Records roasts with metrics (roast time, development time and ratio, drop temperature, weight loss), cupping schedules, tasting notes, and Kaffelogic log/profile import.
+- Plans cupping sessions with roast assignments, per-cup sensory scores, and summaries.
+- Shows a timeline of upcoming and completed cuppings.
+
+### Screenshots
+
+The same coffee, roast, and cupping workflows adapt to desktop and mobile screens. Select an image to open it at full resolution.
+
+**Desktop timeline.** The home view lists recent roasts and upcoming cuppings with their scheduled dates.
+
+[![Home timeline with recent roasts and upcoming cuppings](assets/corocu/timeline-desktop.png)](assets/corocu/timeline-desktop.png)
+
+**Desktop roast detail.** Each roast records its coffee, version, metrics, cupping schedule, and tasting notes, with an optional imported roast profile chart.
+
+[![Roast detail with metrics, cupping schedule, and tasting notes](assets/corocu/roast-desktop.png)](assets/corocu/roast-desktop.png)
+
+| Mobile cupping                                                                                                                                                   | Mobile coffees                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<img src="assets/corocu/cupping-mobile.png" alt="Mobile cupping detail with assigned roasts and per-cup sensory scores" width="280">](assets/corocu/cupping-mobile.png) | [<img src="assets/corocu/coffees-mobile.png" alt="Mobile coffee list with current coffees and their roast counts" width="280">](assets/corocu/coffees-mobile.png) |
+
+### Product and interface decisions
+
+The central design choice was restraint: stay focused on the roasting workflow of one person. Public registration, multi-user tenancy, marketplaces, and social features are outside its scope.
+
+Coffee, roast, and cupping screens share one navigation model, and the home timeline ties them together by date. Mobile and desktop use the same workflows rather than separate feature sets.
+
+### Engineering decisions
+
+**Owner-scoped data.** COROCU is a single-owner application without public registration. Authorization is enforced in server-side operations and PostgreSQL Row Level Security, so all rows are scoped to the owner.
+
+**Roast and cupping model.** Roast metrics, cupping schedules, tasting notes, and imported roast logs are part of the data model. Changes to that model are managed through versioned database migrations.
+
+**Verification and operation.** The project includes unit, component, database, and browser tests. Local development resets and seeds a fresh database with example coffees, roasts, and cuppings in one command.
+
+### Technology
+
+Next.js App Router · React · TypeScript · Tailwind CSS · shadcn/ui · Supabase Auth and PostgreSQL · Vercel · Vitest · Playwright
+
+### About this case study
+
+COROCU is a private, single-owner application without public registration. The operational repository remains private. This page presents the product and engineering work; it does not provide a reusable application distribution or a public demo.
